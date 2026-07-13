@@ -7,7 +7,7 @@
     [Source](https://github.com/joegoldin/go-module).
   '';
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
   inputs.garnix-lib.url = "github:joegoldin/garnix-lib";
   inputs.garnix-lib.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -65,8 +65,8 @@
               lib.mkOption {
                 type = lib.types.str;
                 description = "The Go toolchain version to build with (maps to nixpkgs `go_<major>_<minor>`, falling back to the default `go`).";
-                default = "1.23";
-                example = "1.22";
+                default = "1.25";
+                example = "1.26";
               }
               // {
                 name = "Go version";
